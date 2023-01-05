@@ -14,31 +14,34 @@ public class Lab11avst {
         computePrimes(primes);
         displayPrimes(primes);
     }
+
     // Treat all numbers as prime, make a loop that does this and changes all values to true in computeprimes
     // Step 2 remove primes
     // To start remove multiples of 2
-
     public static void computePrimes(boolean primes[]) {
+
         System.out.println("\nCOMPUTING PRIME NUMBERS");
-        System.out.print("Values before the change.");
+        System.out.println("Values before the change.");
+        System.out.print("\n");
 
-        for (int k = 2; k < primes.length; k++) {
-
-
+        for (int k = 1; k < primes.length; k ++) {
+            if (primes[k] == false) {
+                System.out.print(k + " ");
+            }
         }
+
     }
 
     public static void displayPrimes(boolean primes[]) {
         System.out.println("\n\nPRIMES BETWEEN 1 AND " + primes.length);
         System.out.println();
 
-        for (int k = 2; k < primes.length; k++) {
-            System.out.print(k + " ");
-
+        for (int k = 2 * 2; k < primes.length; k += 2) {
+            if (primes[k] == false) {
+                System.out.print(k + " ");
+            }
         }
+
     }
 
 }
-
-
-
